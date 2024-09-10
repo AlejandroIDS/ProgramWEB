@@ -2,31 +2,65 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>act3</title>
+    <title>ejercicio 1</title>
 </head>
 <body>
-   
-    <!--(<main>, <header>, <nav>, <article>, etc)
 
-    Un campo de entrada (<input>) para el nombre del usuario.
-    Un área de texto (<textarea>) para que el usuario deje un mensaje.
-    Un menú desplegable (<select>) para que el usuario elija el motivo de contacto, con opciones (<option>) agrupadas bajo un <optgroup>.
-    Un botón de envío (<button>).
-    Un campo con sugerencias de autocompletado usando <datalist>.-->
-
-    <header>Header act3</header>
-
+    <header>Header eje3</header>
+    
     <nav>no hay nav :C</nav>
+    
+    <style>
+        /* Definir la fuente usando @font-face */
+        @font-face {
+            font-family: "metalFont";
+            src: url('./media/metalFont.otf') format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    <main>
+        header, nav, body {
+            font-family: 'metalFont', sans-serif; /* Aplicar la fuente definida */
+        }
+
+        body {  
+            background-color: purple; /* Fallback for unsupported browsers */
+            background-color: color-mix(in hsl, rgb(179, 0, 255) 80%);
+            background-image: url("./media/metal_pipe.png");
+        }
+
+        div {
+            color: rgb(29, 146, 120);
+            font-size: 14px;
+        }
+
+        /* Se usa el atributo creado con class para modificar estilos específicos */
+        .wea-1 {
+            color: rgb(211, 57, 23);
+            background-color: rgb(27, 161, 12);
+        }
+
+        input, select, textarea, button {
+            border: 3px solid rgb(58, 180, 182); 
+            border-radius: 6px;
+            padding: 6px; 
+            box-sizing: border-box; 
+        }
+
+
+    </style>
+    
+    <main >
+
         <form>
-            <div>
+            <div id="div1">
                 <h3>Nombre</h3>
                 <input>
             </div>
 
             <div>
-                <h3>genero</h3>
+                <!--Se cambia el atributo con class=""   se separan palabras con "-" -->
+                <h3 class="wea-1">genero</h3>
                 <select><optgroup>
                     <option>Hombre</option>
                     <option>Mujer</option>
@@ -46,6 +80,13 @@
                 <button>enviar</button>
             </div>
         </form>
+
+        <div>
+            <audio controls autoplay loop>
+                <source src="./img/pipeSound.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        
     </main>
 
 </body>
