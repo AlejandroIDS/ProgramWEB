@@ -30,7 +30,12 @@
 
 }
 
-.button{
- 
-  
+button {
+  padding: 1rem;
+  background-color: rgb(0, 140, 255);
+  border: 0px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+  border-radius: 10px;
 }
