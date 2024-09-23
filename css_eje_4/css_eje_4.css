@@ -1,0 +1,59 @@
+body {  
+    display: flex;
+    background-color: rgb(34, 35, 38);
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegúrate de que ocupe toda la altura de la pantalla */
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.signUp-card {
+    margin: 0 auto;
+    border: 1px solid black;
+    height: 400px;
+    width: 380px;
+    text-align: center;
+    background-color: rgb(51, 49, 64);
+    color: white;
+    border-radius: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    border-color: rgb(168, 133, 242);
+
+}
+
+.signUp-title {
+    margin-bottom: 0; 
+}
+
+#name, #email, #password, .gender {
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px 20px;
+}
+
+input, select {
+    margin-left: 10px; 
+    padding: 5px; 
+    width: calc(100% - 30px);
+    background-color: lightgray;
+}
+
+.send-button {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px; 
+    font-weight: bolder;
+    border-radius: 10px;
+    background-color: lightgray;
+
+}
+
+button:hover{
+    background-color: rgb(168, 133, 242);
+    color: white;
+}
