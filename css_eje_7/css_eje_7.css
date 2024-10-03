@@ -1,0 +1,114 @@
+/*Variables*/
+:root {
+  --background-color: rgb(34, 35, 38);
+  --background-color2: #1e1e1e;
+  --panels-color: rgb(51, 49, 64);
+  --accent-color: rgb(168, 133, 242);
+  --font-color: rgb(255, 255, 255);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);  
+}
+
+header {
+  background-color: var(--panels-color);
+  padding: 15px 0;
+  
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  color: var(--font-color);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+nav a:hover {
+  border-radius: 5px;
+}
+
+select{
+  color: var(--font-color);
+  background-color: var(--panels-color);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  border-color: var(--accent-color);
+}
+
+.grid1{
+  color: var(--font-color);
+  margin-top: 1%;
+  margin-left: 20%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3,auto);
+}
+
+.card-top{
+  background-color: var(--panels-color);
+  grid-column: 2/2;
+  grid-row: 1/1;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.title{
+  padding: 10px;
+  justify-content: left;
+}
+
+.user{
+  justify-content: right; 
+  padding: 10px;
+}
+
+.card-mid{
+  background-color: var(--panels-color);
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
+.card-down{
+  background-color: var(--panels-color);
+  grid-column: 2/2;
+  grid-row: 3/3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.likes{
+  padding: 10px;
+  justify-content: left;
+}
+
+.comments{
+  justify-content: right; 
+  padding: 10px;
+}
+
