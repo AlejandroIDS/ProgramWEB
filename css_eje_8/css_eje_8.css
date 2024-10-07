@@ -181,13 +181,13 @@ a:hover {
   /*Header inferior--------------------------------------------------------------------------------*/
 
   .header-bottom {
-    width: 100%;
-    background-color: var(--panels-color);
+    background-color: var(--background-color);
     position: sticky; 
     bottom: 0; 
     padding: 10px;
     display: flex;
     justify-content: space-between; 
+    
   }
 
   .header-bottom ul {
@@ -199,11 +199,12 @@ a:hover {
   }
 
   .header-bottom ul li {
-      margin: 0 20px; 
+      margin: 0 15px;
+       
   }
 
   .header-bottom ul li a {
-      font-size: 16px;
+      font-size: 15px;
       text-decoration: none;
 
   }
