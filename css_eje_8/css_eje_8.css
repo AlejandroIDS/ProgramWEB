@@ -151,7 +151,7 @@ a:hover {
   header {
     background-color: var(--background-color);
     padding: 15px 0;
-    position: fixed;
+    position: sticky;
     top: 0;
     
   }
@@ -183,22 +183,22 @@ a:hover {
   .header-bottom {
     width: 100%;
     background-color: var(--panels-color);
-    position: fixed; /* o fixed si prefieres */
-    bottom: 0; /* se queda en la parte inferior */
+    position: sticky; 
+    bottom: 0; 
     padding: 15px 0;
     display: flex;
-    justify-content: space-around; /* distribuye los elementos */
+    justify-content: space-around; 
   }
 
   .header-bottom ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
-      display: flex; /* Cambiar a flex para horizontal */
+      display: flex;
   }
 
   .header-bottom ul li {
-      margin: 0 20px; /* Espaciado entre items */
+      margin: 0 20px; 
   }
 
   .header-bottom ul li a {
