@@ -10,6 +10,11 @@
     visibility: hidden;
 }
 
+.margins{
+    margin-left: 40%;
+    margin-right: 20%;
+}
+
 /*MODO LANDSCAPE----------------------------------------------------------------------------------------*/
 
 @media (min-width: 1201px) or (orientation: landscape) {
@@ -25,7 +30,6 @@
     /*Scroll del perfil---------------------------------------------------------------------------------*/
     .profile-scroll {
         margin-left: 20%;
-        display: grid;
         grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     }
@@ -75,7 +79,6 @@
 
     /*Scroll del perfil---------------------------------------------------------------------------------*/
     .profile-scroll {
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
@@ -149,7 +152,6 @@
 }
 
 
-
 .stats {
     width: 20%;
     position: absolute;
@@ -161,21 +163,6 @@
     gap: 15%;
 }
 
-.following,
-.followers {
-    margin: 10%;
-    width: 70px;
-    text-align: center;
-}
-
-.saves {
-    margin: 15.5%;
-    width: 45px;
-    text-align: center;
-
-}
-
-
 .stat {
     position: relative;
     display: flex;
@@ -185,29 +172,15 @@
 
 .stat-number {
     position: absolute;
-    top: -10px;
+    top: -17px;
     text-align: center;
 }
+ 
 
-.highlights-button{
-    grid-column: 1/3;
-    display: flex;
-    justify-content: center;
-    padding: 2%;
+.purpleBorder{
     border-bottom: 3px solid var(--accent-color);
-
-}   
-
-.archive-button{
-    grid-column: 2/4;
-    display: flex;
-    justify-content: center;
-    padding: 2%;
 }
 
-.image{
-    width: 97%;
-    aspect-ratio: 1 / 1; 
-    object-fit: cover;
-    border: 3px solid var(--panels-color);
+.panelBorder{
+    background-color: var(--panels-color);
 }
