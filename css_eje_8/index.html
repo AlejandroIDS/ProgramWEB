@@ -12,8 +12,15 @@
 <body>
 
     <header> 
-        <div class="nav-container">
-            <a href="#" class="logo">Ale</a>
+        <div class="header-desktop">
+            <a href="index.html" class="logo">Ale</a>
+            <nav>
+                <a href="#">Search</a>
+            </nav>
+        </div>
+
+        <div class="header-mobile">
+            <a href="index.html" class="logo">Ale</a>
             <nav>
                 <a href="#">Search</a>
             </nav>
@@ -22,11 +29,11 @@
 
     <div class="sidebar">
         <ul>
-            <li><a href="#">For you</a></li>
-            <li><a href="#">Followed</a></li>
-            <li><a href="#">Create post</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="#" class="foryou-button"> For you</a></li >
+            <li><a href="#" class="followed-button"> Followed</a></li class>
+            <li><a href="#"><img src="../media/svg/plusCircle.svg" alt="Create post" class="create-icon"> Create</a></li> 
+            <li><a href="#"><img src="../media/svg/Message square.svg" alt="Messages" class="messages-icon"> Messages</a></li> 
+            <li><a href="#"><img src="../media/svg/User.svg" alt="Profile" class="profile-icon"> Profile </a></li> 
         </ul>
     </div>
 
@@ -35,13 +42,15 @@
 
         <div class="card-top">
             <div class="title">
-                titulo de foto
+                Photo title
             </div>
 
             <div class="user">
-                nombre de usuario
+                <a href="#"><img src="../media/svg/account_circle.svg" alt="Usuario" class="user-icon"></a>
+                <a href="#">User name</a>
             </div>
         </div>
+        
 
         <div class="card-mid">
             <div class="image"> 
@@ -50,56 +59,69 @@
         </div>
 
         <div class="card-bottom">
-            <div class="likes"> 
-                likes
+            <div class="interaction"> 
+                <a href="#"><img src="../media/svg/Heart.svg" alt="likes" class="likes-icon"></a>
+                <a href="#"><img src="../media/svg/Save.svg" alt="save" class="save-icon"></a>
+                <a href="#"><img src="../media/svg/Message circle.svg" alt="comments" class="comments-icon"></a>
+
+
             </div>
 
-            <div class="comments"> 
-                comentarios
+            <div class="share"> 
+                <a href="#"><img src="../media/svg/greyShare.svg" alt="share" class="share-icon"></a>
             </div>
         </div>
 
     </div>
+
 
     <div class="grid1">
 
         <div class="card-top">
             <div class="title">
-                titulo de foto
+                Photo name
             </div>
 
             <div class="user">
-                nombre de usuario
+                <a href="#"><img src="../media/svg/account_circle.svg" alt="Usuario" class="user-icon"></a>
+                <a href="#">User name</a>
             </div>
         </div>
 
         <div class="card-mid">
             <div class="image"> 
-                <img src="../media/gar.jpg" width="100%" alt="garza" title="foto de garza">
+                <img src="../media/portrait1.jpg" width="100%" alt="portrait1" title="foto de retrato">
             </div>
         </div>
 
         <div class="card-bottom">
-            <div class="likes"> 
-                likes
+            <div class="interaction"> 
+                <a href="#"><img src="../media/svg/Heart.svg" alt="likes" class="likes-icon"></a>
+                <a href="#"><img src="../media/svg/Save.svg" alt="save" class="save-icon"></a>
+                <a href="#"><img src="../media/svg/Message circle.svg" alt="comments" class="comments-icon"></a>
+
+
             </div>
 
-            <div class="comments"> 
-                comentarios
+            <div class="share"> 
+                <a href="#"><img src="../media/svg/greyShare.svg" alt="share" class="share-icon"></a>
             </div>
         </div>
 
     </div>
 
+    <div>
+        <h1>FIN</h1>
+    </div>
+    
+
     <div class="header-bottom">
         <ul>
-            <li><a href="#">For you</a></li>
-            <li><a href="#">Followed</a></li>
-            <li><a href="#">Create post</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="#"><img src="../media/svg/Home.svg" alt="Home" class="create-icon"> </a></li> 
+            <li><a href="#"><img src="../media/svg/plusCircle.svg" alt="Create post" class="create-icon"> </a></li> 
+            <li><a href="#"><img src="../media/svg/Message square.svg" alt="Messages" class="messages-icon"> </a></li> 
+            <li><a href="#"><img src="../media/svg/User.svg" alt="Profile" class="profile-icon">  </a></li>
         </ul>
     </div>
-
 </body>
 </html>

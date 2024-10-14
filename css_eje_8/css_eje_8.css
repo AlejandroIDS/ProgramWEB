@@ -30,16 +30,24 @@ a:hover {
 @media (min-width: 1201px) or (orientation: landscape){
   
   /*HEADER------------------------------------------------------------------------------------*/
+  .header-bottom{
+    display: none;
+  }
+
+  .header-mobile{
+    display: none;
+  }
 
   header {
     background-color: var(--background-color);
     padding: 15px 0;
     position: sticky;
     top: 0;
-    
+    z-index: 1000;
+    border-bottom: 2px solid black;
   }
 
-  .nav-container {
+  .header-desktop {
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -64,26 +72,52 @@ a:hover {
   /*SideBar--------------------------------------------------------------------------------*/
 
   .sidebar {
+    padding-top: 5%;
     width: 20%;
     height: 100vh;
-    position: sticky;
-    top: 0;
-    background-color: var(--panels-color);
-    float: left;
-    
+    position: fixed; /* Fijo en la parte izquierda */
+    top: 0; /* Alinea en la parte superior */
+    left: 0; /* Alinea el sidebar a la izquierda */
+    background-color: var(--background-color);
+    z-index: 5; /* El sidebar debe estar debajo del header */
+    border-right: 2px solid black;
   }
-  
+
   .sidebar ul {
-    list-style-type: none;
-    padding: 0;
+      list-style-type: none;
+      padding: 0;
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
   }
-  
+
   .sidebar ul li {
-    margin: 20px 0;
+    margin-bottom: 5vh;
+    width: 100%;
   }
-  
+
   .sidebar ul li a {
-    font-size: 18px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      justify-content: center;
+      background-color: var(--panels-color);
+      flex: 1;
+      height: 10vh;
+      width: 100%;
+  }
+
+  .create-icon,.profile-icon,.messages-icon{
+    width: 50px;
+    margin-right: 10px;  
+  }
+
+  .foryou-button {
+    width: 120px;
+    border-bottom: 3px solid var(--accent-color);
+    justify-content: center;
   }
 
   /*--------------------------------------------------------------------------------------*/
@@ -109,12 +143,20 @@ a:hover {
     padding: 10px;
     justify-content: left;
   }
-  
-  .user{
-    justify-content: right; 
-    padding: 10px;
+  .user {
+    display: flex; 
+    align-items: center; 
   }
-  
+
+  .user-icon {
+      width: 30px; 
+      height: auto; 
+      margin-right: 10px;
+      display:flex;
+      align-items: center
+      ;
+  }
+
   .card-mid{
     background-color: var(--panels-color);
     grid-column: 2/2;
@@ -129,14 +171,18 @@ a:hover {
     justify-content: space-between;
   }
   
-  .likes{
+  .interaction{
     padding: 10px;
     justify-content: left;
   }
   
-  .comments{
-    justify-content: right; 
+  .share{
     padding: 10px;
+    justify-content: right; 
+  }
+
+  .likes-icon,.comments-icon,.share-icon,.save-icon{
+    width: 30px;
   }
 }
 
@@ -148,6 +194,10 @@ a:hover {
     display: none;
   }
 
+  .header-desktop{
+    display: none;
+  }
+
   header {
     background-color: var(--background-color);
     padding: 15px 0;
@@ -156,7 +206,7 @@ a:hover {
     
   }
 
-  .nav-container {
+  .header-mobile {
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -182,32 +232,59 @@ a:hover {
 
   .header-bottom {
     background-color: var(--background-color);
-    position: sticky; 
+    position: fixed; 
     bottom: 0; 
     padding: 10px;
     display: flex;
     justify-content: space-between; 
-    
-  }
+    width: 100%;
+    box-sizing: border-box;
+}
 
-  .header-bottom ul {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      list-style-type: none;
+.header-bottom ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-  }
+.header-bottom ul li {
+    display: flex;
+    justify-content: center;
+}
 
-  .header-bottom ul li {
-      margin: 0 15px;
-       
-  }
+.header-bottom ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
-  .header-bottom ul li a {
-      font-size: 15px;
-      text-decoration: none;
+.create-icon, .profile-icon, .messages-icon, .foryou-button, .followed-button {
+    display: flex;
+    width: 50px;
+    justify-content: center;
+}
 
-  }
+.foryou-button, .followed-button {
+    width: auto;
+    padding: 0 15px; /* Ajusta el relleno para más espacio */
+    white-space: nowrap;
+}
+
+.foryou-button {
+    border-bottom: 3px solid var(--accent-color);
+}
+
+/* Ajusta márgenes si es necesario */
+.header-bottom ul {
+    padding-left: 15px; /* Añadir margen izquierdo */
+    padding-right: 15px; /* Añadir margen derecho */
+}
 
   /*--------------------------------------------------------------------------------------*/
   
@@ -215,7 +292,7 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3,auto);
-    margin-bottom: 1%;
+    margin-bottom: 2%;
   }
   
   .card-top{
@@ -231,12 +308,17 @@ a:hover {
     padding: 10px;
     justify-content: left;
   }
-  
-  .user{
-    justify-content: right; 
-    padding: 10px;
+  .user {
+    display: flex; 
+    align-items: center; 
   }
-  
+
+  .user-icon {
+      width: 30px; 
+      height: auto; 
+      margin-right: 10px;
+  }
+
   .card-mid{
     background-color: var(--panels-color);
     grid-column: 1/1;
@@ -251,14 +333,18 @@ a:hover {
     justify-content: space-between;
   }
   
-  .likes{
+  .interaction{
     padding: 10px;
     justify-content: left;
   }
   
-  .comments{
-    justify-content: right; 
+  .share{
     padding: 10px;
+    justify-content: right; 
+  }
+
+  .likes-icon,.comments-icon,.share-icon,.save-icon{
+    width: 30px;
   }
 }
 
