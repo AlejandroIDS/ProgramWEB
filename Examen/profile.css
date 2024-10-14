@@ -151,7 +151,6 @@
     z-index: 1;
 }
 
-
 .stats {
     width: 20%;
     position: absolute;
@@ -172,7 +171,7 @@
 
 .stat-number {
     position: absolute;
-    top: -20px;
+    top: -18px;
     text-align: center;
 }
  
