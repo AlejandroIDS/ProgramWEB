@@ -19,3 +19,6 @@
 #### Ejercicio 8: https://alejandroids.github.io/ProgramWEB/css_eje_8/index.html 
 
 #### Examen: https://alejandroids.github.io/ProgramWEB/examen
+
+# JavaScript
+#### Ejercicio 8: https://alejandroids.github.io/ProgramWEB/JavaScript/
