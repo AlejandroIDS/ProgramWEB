@@ -22,5 +22,4 @@
 
 # JavaScript
 #### Ejercicio 8: https://alejandroids.github.io/ProgramWEB/JavaScript/
-#### Ejercicio 8: https://alejandroids.github.io/ProgramWEB/JavaScript_2/
-
+#### https://alejandroids.github.io/ProgramWEB/JavaScript_2/index.html
