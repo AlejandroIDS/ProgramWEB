@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.09-a-hHUKbZ91KrlqJ4yHAHaHa?rs=1&pid=ImgDetMain">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>!Cambia el color de fondo usando uno de los botones!</h1>
+    </div>
+
+    <div class="buttons">
+        <button id="redButton" style="background-color: red;">ROJO</button>
+        <button id="blueButton" style="background-color: blue;">AZUL</button>
+        <button id="greenButton" style="background-color: green;">VERDE</button>
+        <button id="defaultButton" style="background-color: white;">BLANCO</button>
+
+    </div>
+
+    <script>
+        const redButton = document.getElementById('redButton');
+        const blueButton = document.getElementById('blueButton');
+        const greenButton = document.getElementById('greenButton');
+        const defaultButton = document.getElementById('defaultButton');
+
+        const body = document.getElementsByTagName('body');
+
+
+        redButton.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'red';
+        });
+
+        blueButton.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'blue';
+        });
+
+        greenButton.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'green';
+
+        });
+
+        defaultButton.addEventListener('click', function () {
+            document.body.style.backgroundColor = '#FFF';
+        }); 
+
+
+    </script>
+
+
+</body>
+
+</html>
