@@ -21,5 +21,6 @@
 #### Examen: https://alejandroids.github.io/ProgramWEB/examen
 
 # JavaScript
-#### Ejercicio 8: https://alejandroids.github.io/ProgramWEB/JavaScript/
-#### https://alejandroids.github.io/ProgramWEB/JavaScript_2/index.html
+#### Ejercicio 1: https://alejandroids.github.io/ProgramWEB/JavaScript/
+#### Ejercicio 2: https://alejandroids.github.io/ProgramWEB/JavaScript_2/index.html
+#### Ejercicio 3: https://alejandroids.github.io.ProgramWEB/JavaScript_3/index.html
