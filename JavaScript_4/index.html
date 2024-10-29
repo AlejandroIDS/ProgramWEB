@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.09-a-hHUKbZ91KrlqJ4yHAHaHa?rs=1&pid=ImgDetMain">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <b>Tasks</b>
+        <div class="taskSheet" id="taskSheet"></div>
+
+        <div class="addSquare">
+            <input type="text" class="addTask" id="addTaskText" placeholder="Add new task">
+            <button class="addButton" id="addButton">Add</button>
+        </div>
+    </div>
+
+    <script>
+        loadTasks();
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                document.getElementById("addButton").click();
+            }
+        });
+
+        document.getElementById("addButton").addEventListener("click", function () {
+            let newTask = document.getElementById("addTaskText").value;
+
+            if (newTask === "") {
+                alert("Please add a task");
+                return;
+            }
+
+            addTaskToDOM(newTask);
+            saveTask(newTask);
+            document.getElementById("addTaskText").value = "";
+        });
+
+        function addTaskToDOM(task) {
+            let newTaskDiv = document.createElement("div");
+            newTaskDiv.className = "task";
+            newTaskDiv.innerHTML = `
+                <form>
+                    <label>
+                        <input type="checkbox" name="task">
+                        ${task}
+                    </label>
+                </form>
+                <button class="deleteButton">Delete</button>
+            `;
+            document.getElementById("taskSheet").appendChild(newTaskDiv);
+        }
+
+        function saveTask(task) {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            if (tasks.length === 0) {
+                // Si no hay tareas, añade un task predeterminado
+                addDefaultTask();
+            } else {
+                tasks.forEach(task => addTaskToDOM(task));
+            }
+        }
+
+        function addDefaultTask() {
+            let defaultTaskDiv = document.createElement("div");
+            defaultTaskDiv.className = "task";
+            defaultTaskDiv.innerHTML = `
+                <form>
+                    <label>
+                        <input type="checkbox" name="Task1">
+                        Task
+                    </label>
+                </form>
+                <button class="deleteButton">Delete</button>
+            `;
+            document.getElementById("taskSheet").appendChild(defaultTaskDiv);
+        }
+
+        document.getElementById("taskSheet").addEventListener("click", function (event) {
+            if (event.target.classList.contains("deleteButton")) {
+                const taskDiv = event.target.parentElement;
+                const taskText = taskDiv.querySelector('label').innerText.trim();
+
+                // Eliminar tarea de localStorage
+                const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                const updatedTasks = tasks.filter(task => task !== taskText);
+                localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+
+                taskDiv.remove();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
