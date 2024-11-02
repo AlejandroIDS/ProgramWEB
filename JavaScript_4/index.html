@@ -67,7 +67,6 @@
         function loadTasks() {
             const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
             if (tasks.length === 0) {
-                // Si no hay tareas, añade un task predeterminado
                 addDefaultTask();
             } else {
                 tasks.forEach(task => addTaskToDOM(task));
@@ -94,7 +93,6 @@
                 const taskDiv = event.target.parentElement;
                 const taskText = taskDiv.querySelector('label').innerText.trim();
 
-                // Eliminar tarea de localStorage
                 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
                 const updatedTasks = tasks.filter(task => task !== taskText);
                 localStorage.setItem('tasks', JSON.stringify(updatedTasks));

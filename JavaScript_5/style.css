@@ -1,0 +1,66 @@
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      align-content: center;
+    }
+
+    .container {
+      width: 40%;
+      height: 80vh;
+      border: 2px solid black;
+      background-color: whitesmoke;
+      box-shadow: 10px 5px 5px gray;
+      border-radius: 30px;
+    }
+
+    .catData {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 90%;
+    }
+
+    .catImage {
+      border-radius: 15px;
+      width: 30%;
+      height: fit-content;
+    }
+
+    .catInfo{
+      height: 90%;
+      width: 60%;
+      overflow-y: auto;    
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5%;
+    }
+
+    button {
+      width: 70px;
+      background-color: aliceblue;
+      box-shadow: 1px 1px 1px gray;
+    }
+
+    .nextButton:hover {
+      background-color: rgb(220, 220, 255);
+    }
+
+    .backButton:hover {
+      background-color: rgb(255, 220, 220);
+    }
+
+    .nextButton:active {
+      background-color: rgb(180, 180, 255);
+    }
+
+    .backButton:active {
+      background-color: rgb(255, 180, 180);
+
+    }

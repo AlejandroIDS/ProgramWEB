@@ -24,5 +24,7 @@
 #### Ejercicio 1: https://alejandroids.github.io/ProgramWEB/JavaScript/
 #### Ejercicio 2: https://alejandroids.github.io/ProgramWEB/JavaScript_2/index.html
 #### Ejercicio 3: https://alejandroids.github.io.ProgramWEB/JavaScript_3/index.html
-#### Ejercicio 4: https://alejandroids.github.io.ProgramWEB/JavaScript_4/index.html
+#### Ejercicio 4: https://alejandroids.github.io/ProgramWEB/JavaScript_4/index.html
+#### Ejercicio 5: https://alejandroids.github.io/ProgramWEB/JavaScript_5/index.html
+
 
