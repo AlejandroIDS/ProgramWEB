@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gatosss</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.09-a-hHUKbZ91KrlqJ4yHAHaHa?rs=1&pid=ImgDetMain">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="catData">
+            
+        </div>
+
+        <div class="buttons">
+            <button class="backButton">Back</button>
+            <button class="nextButton">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const apiKey = 'live_t9JEJ7dH7FbxXIDbwgHUsOpcCrLas9RfRpkoTFIBzMeLFVuHUL4iFTxGxRHB1sM9'; 
+        const catInfoContainer = document.querySelector('.catData');
+        const backButton = document.querySelector('.backButton');
+        const nextButton = document.querySelector('.nextButton');
+
+        let catData = [];  
+        let currentIndex = 0; 
+
+        async function fetchCatData() {
+            try {
+                const response = await fetch(`https://api.thecatapi.com/v1/breeds?api_key=${apiKey}`);
+                catData = await response.json();
+                displayCat(currentIndex);
+            } catch (error) {
+                console.error('Error de gatos', error);
+                catInfoContainer.innerHTML = `<p>Error de gatos.</p>`;
+            }
+        }
+
+        function displayCat(index) {
+            const cat = catData[index];
+            catInfoContainer.innerHTML = `
+                <img src="${cat.image?.url}" alt="cat image" class="catImage">
+
+                <div class="catInfo">
+                    <h1>${cat.name}</h1>
+                    <p><b>Temperamento:</b> ${cat.temperament}</p>
+                    <p><b>Años de vida:</b> ${cat.life_span}</p>
+                    <p><b>Descripción:</b> ${cat.description}</p>
+                    <p><b>Amigable con niños:</b> ${cat.child_friendly || 'N/A'}</p>
+                    <p><b>Amigable con perros:</b> ${cat.dog_friendly || 'N/A'}</p>
+                    <p><b>Origen:</b> ${cat.origin}</p>
+                    <p><b>Enlace a Wikipedia:</b> <a href="${cat.wikipedia_url}" target="_blank">Más información</a></p>
+                </div>
+            `;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % catData.length;
+            displayCat(currentIndex);
+        });
+
+        backButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + catData.length) % catData.length; 
+            displayCat(currentIndex);
+        });
+
+        fetchCatData();
+    </script>
+
+</body>
+
+</html>

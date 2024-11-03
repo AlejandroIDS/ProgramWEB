@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat API Demo</title>
+</head>
+
+<body>
+    <h1>Fotos de gatos</h1>
+    <button id="fetch-cat-btn">Mostrar un gato</button>
+    <div id="cat-container">
+        <!-- La imagen del gato aparecerá aquí -->
+    </div>
+
+    <script>
+        // Selecciona elementos del DOM
+        const catContainer = document.getElementById('cat-container');
+        const fetchCatBtn = document.getElementById('fetch-cat-btn');
+
+        // Tu API key
+        const apiKey = 'live_t9JEJ7dH7FbxXIDbwgHUsOpcCrLas9RfRpkoTFIBzMeLFVuHUL4iFTxGxRHB1sM9';
+
+        // Función para obtener una imagen de la API
+        async function fetchCatImage() {
+            try {
+                const response = await fetch('https://api.thecatapi.com/v1/images/search', {
+                    headers: {
+                        'x-api-key': apiKey
+                    }
+                });
+                const data = await response.json();
+
+                // Extraer la URL de la imagen del primer objeto del array
+                const imageUrl = data[0].url;
+
+                // Crear una nueva imagen y actualizar el DOM
+                catContainer.innerHTML = `<img src="${imageUrl}" alt="Cat Image" style="max-width: 300px;">`;
+            } catch (error) {
+                console.error('Error al obtener la imagen del gato:', error);
+            }
+        }
+
+        // Agregar el evento al botón
+        fetchCatBtn.addEventListener('click', fetchCatImage);
+
+    </script>
+</body>
+
+</html>
