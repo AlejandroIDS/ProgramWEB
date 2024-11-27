@@ -34,7 +34,7 @@ $result = $conn->query($sql);
                         echo "<tr>";
                         echo "<td>" . $row['fruta'] . "</td>";
                         echo "<td>" . $row['stock'] . "</td>";
-                        echo "<td>" . $row['precio'] . "€</td>";
+                        echo "<td>" . $row['precio'] . "$</td>";
                         echo "</tr>";
                     }
                 } else {

@@ -28,5 +28,7 @@
 #### Ejercicio 5: https://alejandroids.github.io/ProgramWEB/JavaScript_5/index.html
 #### Ejercicio 6: https://alejandroids.github.io/ProgramWEB/JavaScript_6/index.html
 
-
+# Lado de server
+#### Ejercicio 1: https://alejandroids.github.io/ProgramWEB/Server_1
+##### A decir verdad no se como se debia entregar y se me paso completamente hacerlo
 
